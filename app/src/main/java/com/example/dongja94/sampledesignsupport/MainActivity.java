@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -20,9 +19,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         navigationView = (NavigationView)findViewById(R.id.menu);
-        View view = navigationView.getHeaderView(0);
-        TextView titleView = (TextView)view.findViewById(R.id.text_title);
-        titleView.setText("MyMenu");
+//        View view = navigationView.getHeaderView(0);
+//        TextView titleView = (TextView)view.findViewById(R.id.text_title);
+//        titleView.setText("MyMenu");
         navigationView.setNavigationItemSelectedListener(this);
         Button btn = (Button)findViewById(R.id.btn_show_menu);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +55,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.menu_appbar_layout :
                 startActivity(new Intent(this, AppBarActivity.class));
+                break;
+            case R.id.menu_collapsing_toolbar_layout :
+                startActivity(new Intent(this, CollaspingToolbarActivity.class));
                 break;
         }
 
