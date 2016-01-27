@@ -11,23 +11,50 @@
     tools:context="com.example.dongja94.sampledesignsupport.MainActivity">
 
     <Button
+        android:id="@+id/btn_show_menu"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:text="show menu"
-        android:id="@+id/btn_show_menu" />
+        android:text="show menu" />
 
     <android.support.design.widget.NavigationView
+        android:id="@+id/menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/menu"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/btn_show_menu"
+        android:visibility="gone"
         app:headerLayout="@layout/view_header"
-        app:menu="@menu/navi_menu"
-        android:visibility="gone"/>
+        app:menu="@menu/navi_menu" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btn_show_menu"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </android.support.v7.widget.CardView>
+
 </RelativeLayout>
